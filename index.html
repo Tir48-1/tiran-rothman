@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dr. Tiran Rothman — economist, investor, researcher, author and advisor.">
+<title>Tiran Rothman</title>
+<style>
+:root{
+  --ink:#102235; --muted:#708091; --line:#dce6ed; --paper:#fbfdff;
+  --soft:#f2f7fa; --blue:#6f9fbd; --blue2:#355f78; --pale:#eaf3f8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+body.rtl{direction:rtl;font-family:Arial,"Segoe UI",sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:0 30px}
+.topline{height:4px;background:linear-gradient(90deg,var(--blue2),var(--blue),var(--pale))}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);gap:24px}
+.brand{font-weight:700;letter-spacing:.16em;font-size:13px;color:var(--blue2)}
+.navlinks{display:flex;align-items:center;gap:20px;font-size:12px;color:var(--muted)}
+.navlinks a{color:inherit;text-decoration:none}.navlinks a:hover{color:var(--blue2)}
+.lang{border:1px solid var(--line);background:var(--pale);color:var(--blue2);padding:8px 12px;border-radius:999px;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center;padding:64px 0 84px}
+.kicker,.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--blue2);margin-bottom:22px}
+h1,.display,.card h3,.book h3,.media-copy h3{font-family:Baskerville,Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(52px,7vw,86px);line-height:.93;letter-spacing:-.05em;margin:0 0 26px}
+body.rtl h1,body.rtl .display,body.rtl .card h3,body.rtl .book h3{font-family:"Times New Roman",serif;letter-spacing:-.02em}
+.lead{font-size:19px;line-height:1.65;color:var(--muted);max-width:600px}
+.hero img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+section{padding:68px 0;border-top:1px solid var(--line)}
+.display{font-size:clamp(31px,4vw,48px);line-height:1.1;letter-spacing:-.035em;max-width:880px}
+.work-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.card{padding:24px 18px 24px 0;min-height:170px;border-bottom:1px solid var(--line)}
+.card+.card{padding-left:18px;border-left:1px solid var(--line)}
+body.rtl .card{padding:24px 0 24px 18px}
+body.rtl .card+.card{padding-right:18px;padding-left:0;border-left:0;border-right:1px solid var(--line)}
+.num{font-size:10px;color:var(--muted);margin-bottom:40px}
+.card h3{font-size:20px;line-height:1.12;margin:0 0 10px}
+.card p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+.orgs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.org{min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;background:#fff;border:1px solid var(--line)}
+.org img{max-width:118px;max-height:42px;object-fit:contain;filter:grayscale(100%);opacity:.78}
+.org:hover img{filter:none;opacity:1}
+.org-name{font-size:11px;margin-top:10px;color:var(--muted)}
+.org-market{font-size:9px;letter-spacing:.08em;color:var(--blue2);margin-top:3px}
+.tags{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+.tag{font-size:12px;border-bottom:1px solid var(--blue);padding-bottom:5px}
+.pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.pub{border-top:1px solid var(--ink);padding-top:15px}
+.pub small{font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.pub h3{font-family:Baskerville,Georgia,serif;font-size:19px;font-weight:400;line-height:1.25}
+.pub a,.textlink{color:var(--ink);font-size:12px;text-decoration:none;border-bottom:1px solid var(--ink)}
+.books{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.book{border:1px solid var(--line);background:linear-gradient(180deg,#fff,var(--soft));padding:28px;min-height:300px}
+.book-one{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:center}
+.book-cover{width:100%;box-shadow:0 12px 30px rgba(20,45,65,.12)}
+.book h3{font-size:25px;line-height:1.15}
+.book small{font-size:10px;color:var(--muted);letter-spacing:.07em}
+.media-layout{display:grid;grid-template-columns:1.5fr .7fr;gap:18px}
+.featured-video{background:#071c2d;border:1px solid var(--line)}
+.featured-video video{width:100%;display:block;aspect-ratio:16/9;background:#071c2d}
+.media-copy{padding:20px 22px;background:#0e2a40;color:#fff}
+.media-copy h3{font-size:25px;margin:0 0 5px}.media-copy p{margin:0;color:#c9d8e2;font-size:12px}
+.media-side{display:grid;gap:18px}
+.media-small{min-height:190px;padding:22px;background:linear-gradient(135deg,var(--pale),#fff);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end}
+.media-small small{font-size:9px;color:var(--blue2);letter-spacing:.09em}.media-small strong{font-family:Baskerville,Georgia,serif;font-size:20px;font-weight:400;margin-top:7px}
+.bio{display:grid;grid-template-columns:.52fr 1.48fr;gap:60px}
+.bio p{font-size:17px;line-height:1.78;color:var(--muted);margin:0}
+.connect{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 15px;border:1px solid var(--line);color:var(--ink);text-decoration:none;background:#fff;font-size:12px}
+.btn.primary{background:var(--blue2);border-color:var(--blue2);color:#fff}
+footer{padding:32px 0 42px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:11px}
+footer a{color:inherit;text-decoration:none}
+@media(max-width:860px){
+  .navlinks a{display:none}.hero{grid-template-columns:1fr;gap:32px}.work-grid{grid-template-columns:1fr 1fr}
+  .orgs{grid-template-columns:1fr 1fr}.pub-grid,.books,.media-layout,.bio{grid-template-columns:1fr}.book-one{grid-template-columns:120px 1fr}
+}
+@media(max-width:500px){
+  .wrap{padding:0 18px}.work-grid,.orgs{grid-template-columns:1fr}.card,.card+.card{padding:20px 0!important;border-left:0!important;border-right:0!important}
+  section{padding:50px 0}.book-one{grid-template-columns:95px 1fr}
+}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<div class="wrap">
+<nav>
+  <div class="brand">TIRAN ROTHMAN</div>
+  <div class="navlinks">
+    <a href="#work" data-en="WORK" data-he="פעילות">WORK</a>
+    <a href="#research" data-en="RESEARCH" data-he="מחקר">RESEARCH</a>
+    <a href="#media" data-en="MEDIA" data-he="מדיה">MEDIA</a>
+    <a href="#about" data-en="ABOUT" data-he="אודות">ABOUT</a>
+    <a href="#contact" data-en="CONTACT" data-he="יצירת קשר">CONTACT</a>
+    <button id="lang" class="lang" type="button">עברית</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="kicker" data-en="DR. TIRAN ROTHMAN" data-he="ד״ר טיראן רוטמן">DR. TIRAN ROTHMAN</div>
+    <h1 data-en="Markets.<br>Capital.<br>Behavior." data-he="כלכלה.<br>שווקים.<br>החלטות.">Markets.<br>Capital.<br>Behavior.</h1>
+    <p class="lead" data-en="Economist, investor, researcher, author and advisor working across financial markets, capital and human decision-making." data-he="כלכלן, משקיע, חוקר, מחבר ויועץ הפועל בעולמות הפיננסים, שוקי ההון וקבלת ההחלטות.">Economist, investor, researcher, author and advisor working across financial markets, capital and human decision-making.</p>
+  </div>
+  <img src="assets/portrait.png" alt="Dr. Tiran Rothman">
+</header>
+
+<section id="work">
+  <div class="eyebrow" data-en="WORK & EXPERIENCE" data-he="פעילות וניסיון">WORK & EXPERIENCE</div>
+  <div class="work-grid">
+    <div class="card"><div class="num">01</div><h3 data-en="Economic Expert" data-he="חוות דעת כלכליות">Economic Expert</h3><p data-en="Valuation and complex economic analysis." data-he="הערכות שווי וניתוחים כלכליים מורכבים.">Valuation and complex economic analysis.</p></div>
+    <div class="card"><div class="num">02</div><h3 data-en="Board Roles" data-he="דירקטוריונים">Board Roles</h3><p data-en="Finance, technology, investment and innovation." data-he="פיננסים, טכנולוגיה, השקעות וחדשנות.">Finance, technology, investment and innovation.</p></div>
+    <div class="card"><div class="num">03</div><h3 data-en="Investments & Ventures" data-he="השקעות ומיזמים">Investments & Ventures</h3><p data-en="Capital, investment and venture building." data-he="הון, השקעות ובניית מיזמים.">Capital, investment and venture building.</p></div>
+    <div class="card"><div class="num">04</div><h3 data-en="Media" data-he="מדיה">Media</h3><p data-en="Markets, economics and financial commentary." data-he="שווקים, כלכלה ופרשנות פיננסית.">Markets, economics and financial commentary.</p></div>
+    <div class="card"><div class="num">05</div><h3 data-en="Advisory" data-he="ייעוץ">Advisory</h3><p data-en="Financial, strategic and behavioral advisory." data-he="ייעוץ פיננסי, אסטרטגי והתנהגותי.">Financial, strategic and behavioral advisory.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow" data-en="SELECTED ORGANIZATIONS & AFFILIATIONS" data-he="ארגונים ושיוכים נבחרים">SELECTED ORGANIZATIONS & AFFILIATIONS</div>
+  <div class="orgs">
+    <div class="org"><img src="https://logo.clearbit.com/frost.com?size=256" alt="Frost & Sullivan logo"><div class="org-name">Frost & Sullivan</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/weizmann.ac.il?size=256" alt="Weizmann Institute logo"><div class="org-name">Weizmann Institute</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/amdocs.com?size=256" alt="Amdocs logo"><div class="org-name">Amdocs</div><div class="org-market">NASDAQ: DOX</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/tase.co.il?size=256" alt="Tel Aviv Stock Exchange logo"><div class="org-name">Tel Aviv Stock Exchange</div><div class="org-market">TASE: TASE</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/ashdodport.co.il?size=256" alt="Ashdod Port logo"><div class="org-name">Ashdod Port Company</div><div class="org-market" data-en="REPORTING COMPANY" data-he="חברה מדווחת">REPORTING COMPANY</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/runi.ac.il?size=256" alt="Reichman University logo"><div class="org-name">Reichman University</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/playstudios.com?size=256" alt="PLAYSTUDIOS logo"><div class="org-name">PLAYSTUDIOS</div><div class="org-market">NASDAQ: MYPS</div></div>
+    <div class="org"><img src="https://logo.clearbit.com/scilexholding.com?size=256" alt="Scilex Holding logo"><div class="org-name">Scilex Holding Company</div><div class="org-market">NASDAQ: SCLX</div></div>
+  </div>
+  <p style="font-size:10px;color:var(--muted);margin-top:12px" data-en="Selected organizations and institutions with which Tiran has worked, advised, collaborated or held academic affiliations." data-he="מבחר ארגונים ומוסדות עמם טיראן עבד, ייעץ, שיתף פעולה או היה בעל שיוך אקדמי.">Selected organizations and institutions with which Tiran has worked, advised, collaborated or held academic affiliations.</p>
+</section>
+
+<section id="research">
+  <div class="eyebrow" data-en="RESEARCH & IDEAS" data-he="מחקר ורעיונות">RESEARCH & IDEAS</div>
+  <div class="display" data-en="How do people, markets and financial systems make decisions, learn and adapt?" data-he="כיצד אנשים, שווקים ומערכות פיננסיות מקבלים החלטות, לומדים ומסתגלים?">How do people, markets and financial systems make decisions, learn and adapt?</div>
+  <div class="tags"><span class="tag">Behavioral Finance</span><span class="tag">Financial Markets</span><span class="tag">Decision Making</span><span class="tag">Complex Systems</span><span class="tag">Valuation</span></div>
+</section>
+
+<section>
+  <div style="display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap">
+    <div class="eyebrow" data-en="SELECTED PUBLICATIONS" data-he="פרסומים נבחרים">SELECTED PUBLICATIONS</div>
+    <a class="textlink" href="https://www.researchgate.net/profile/Tiran-Rothman-2" target="_blank" rel="noopener" data-en="VIEW ALL PUBLICATIONS →" data-he="לכל הפרסומים ←">VIEW ALL PUBLICATIONS →</a>
+  </div>
+  <div class="pub-grid">
+    <article class="pub"><small>BEHAVIORAL FINANCE</small><h3>Pharmaceutical Lottery Stocks: Investors’ Reaction to FDA Announcements</h3><a href="https://www.researchgate.net/profile/Tiran-Rothman-2" target="_blank">View publication →</a></article>
+    <article class="pub"><small>INVESTOR BEHAVIOR</small><h3>Determination of Behavioral Finance Patterns Affecting Investors’ Activity in Capital Markets</h3><a href="https://www.researchgate.net/profile/Tiran-Rothman-2" target="_blank">View publication →</a></article>
+    <article class="pub"><small>CAPITAL MARKETS</small><h3>The Critical Impact of Firms’ Market Value on Investor Behavior Following Pharmaceutical IPOs</h3><a href="https://www.researchgate.net/profile/Tiran-Rothman-2" target="_blank">View publication →</a></article>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow" data-en="BOOKS" data-he="ספרים">BOOKS</div>
+  <div class="books">
+    <div class="book book-one">
+      <a href="https://www.amazon.com/dp/3030388468" target="_blank" rel="noopener"><img class="book-cover" src="https://books.google.com/books/content?id=-Kk8zAEACAAJ&printsec=frontcover&img=1&zoom=2&source=gbs_api" alt="Valuations of Early-Stage Companies and Disruptive Technologies"></a>
+      <div><small>PALGRAVE MACMILLAN · 2020</small><h3>Valuations of Early-Stage Companies and Disruptive Technologies</h3><a class="textlink" href="https://www.amazon.com/dp/3030388468" target="_blank" rel="noopener">View on Amazon →</a></div>
+    </div>
+    <div class="book"><small data-en="COMING 2027" data-he="בקרוב · 2027">COMING 2027</small><h3 data-en="How Do You Buy Time?<br><span style='font-size:16px'>Financial freedom in an irrational world</span>" data-he="איך קונים זמן?<br><span style='font-size:16px'>חופש כלכלי בעולם לא רציונלי</span>">How Do You Buy Time?<br><span style="font-size:16px">Financial freedom in an irrational world</span></h3></div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="eyebrow" data-en="MEDIA & SPEAKING" data-he="מדיה והרצאות">MEDIA & SPEAKING</div>
+  <div class="media-layout">
+    <div class="featured-video">
+      <video controls preload="metadata" poster="assets/tv10.png">
+        <source src="assets/tv10.mp4" type="video/mp4">
+      </video>
+      <div class="media-copy"><h3 data-en="Featured Television Appearance" data-he="הופעה נבחרת בטלוויזיה">Featured Television Appearance</h3><p data-en="Israel's Economy Channel · July 2026" data-he="ערוץ הכלכלה · יולי 2026">Israel's Economy Channel · July 2026</p></div>
+    </div>
+    <div class="media-side">
+      <div class="media-small"><small>INTERVIEWS</small><strong data-en="Markets & Behavioral Finance" data-he="שווקים וכלכלה התנהגותית">Markets & Behavioral Finance</strong></div>
+      <div class="media-small"><small>KEYNOTES & PANELS</small><strong data-en="Speaking & Public Commentary" data-he="הרצאות ופרשנות כלכלית">Speaking & Public Commentary</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="bio">
+    <div><div class="eyebrow" data-en="PROFESSIONAL BIO" data-he="ביו מקצועי">PROFESSIONAL BIO</div><div class="display" style="font-size:38px" data-en="Finance.<br>Research.<br>Ideas." data-he="פיננסים.<br>מחקר.<br>רעיונות.">Finance.<br>Research.<br>Ideas.</div></div>
+    <p data-en="Dr. Tiran Rothman is an economist, investor, researcher and strategic advisor with extensive experience across financial markets, valuation, investment and behavioral economics. His career spans senior financial advisory roles, capital markets and investment projects, academic research, board and advisory positions, writing and economic media commentary. He previously served as Chief Economist of a NASDAQ-listed company, has led large-scale valuation and equity research programs, and is the author of Valuations of Early-Stage Companies and Disruptive Technologies. His work focuses on the intersection of markets, capital, innovation and human decision-making." data-he="ד״ר טיראן רוטמן הוא כלכלן, משקיע, חוקר ויועץ אסטרטגי בעל ניסיון נרחב בשווקים פיננסיים, הערכות שווי, השקעות וכלכלה התנהגותית. הקריירה שלו משלבת תפקידי ייעוץ פיננסי בכירים, פעילות בשוקי ההון ובהשקעות, מחקר אקדמי, תפקידי דירקטור וייעוץ, כתיבה ופרשנות כלכלית בתקשורת. בעבר כיהן ככלכלן הראשי של חברה הנסחרת בנאסד״ק, הוביל תוכניות רחבות היקף להערכות שווי ומחקר מניות, והוא מחבר הספר Valuations of Early-Stage Companies and Disruptive Technologies. עבודתו מתמקדת במפגש שבין שווקים, הון, חדשנות וקבלת החלטות אנושית.">Dr. Tiran Rothman is an economist, investor, researcher and strategic advisor with extensive experience across financial markets, valuation, investment and behavioral economics.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="eyebrow" data-en="CONNECT" data-he="קישורים">CONNECT</div>
+  <div class="connect">
+    <a class="btn primary" href="https://www.linkedin.com/in/tiran-rothman-01b1836/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://b-economics.com/" target="_blank" rel="noopener">B-Economics ↗</a>
+    <a class="btn" href="mailto:hello@tiranrothman.com" data-en="Email" data-he="אימייל">Email</a>
+  </div>
+</section>
+
+<footer>
+  <strong>TIRAN ROTHMAN</strong>
+  <span>Markets · Capital · Behavior</span>
+  <span>© 2026</span>
+</footer>
+</div>
+
+<script>
+(()=>{
+  let lang='en';
+  const b=document.getElementById('lang');
+  function apply(){
+    document.documentElement.lang=lang;
+    document.documentElement.dir=lang==='he'?'rtl':'ltr';
+    document.body.classList.toggle('rtl',lang==='he');
+    document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.dataset[lang]);
+    b.textContent=lang==='en'?'עברית':'English';
+  }
+  b.addEventListener('click',()=>{lang=lang==='en'?'he':'en';apply()});
+  document.querySelectorAll('.org img').forEach(img=>{
+    img.addEventListener('error',()=>{img.style.display='none';});
+  });
+  apply();
+})();
+</script>
+</body>
+</html>
