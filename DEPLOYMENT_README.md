@@ -27,3 +27,8 @@ This package is designed as a complete replacement for the GitHub Pages reposito
 - Springer book source: https://link.springer.com/book/10.1007/978-3-030-38847-8
 - TheMarker 40 Under 40 (2018): https://www.themarker.com/magazine/2018-11-05/ty-article-static/0000017f-db7f-d856-a37f-ffff00760000
 - Springer book URL is intentionally attached to the Book entity, not Person.sameAs.
+
+## v31.2 visual fix
+- Uses real full-color organization logos from verified public sources with local fallbacks.
+- Removes grayscale filtering and increases logo display size.
+- Fixes TheMarker 40 Under 40 metric overlap.
