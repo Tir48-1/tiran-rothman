@@ -1,4 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tiranrothman.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://tiranrothman.com/</loc>
+<lastmod>2026-10-04</lastmod>
+<xhtml:link rel="alternate" hreflang="en" href="https://tiranrothman.com/"/>
+<xhtml:link rel="alternate" hreflang="he" href="https://tiranrothman.com/he/"/>
+<image:image><image:loc>https://tiranrothman.com/assets/tiran-rothman-profile.jpg</image:loc><image:title>Dr. Tiran Rothman</image:title></image:image>
+</url>
+<url>
+<loc>https://tiranrothman.com/he/</loc>
+<lastmod>2026-10-04</lastmod>
+<xhtml:link rel="alternate" hreflang="he" href="https://tiranrothman.com/he/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://tiranrothman.com/"/>
+</url>
+<url>
+<loc>https://tiranrothman.com/behavioral-finance/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
+<url>
+<loc>https://tiranrothman.com/startup-valuation/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
+<url>
+<loc>https://tiranrothman.com/research/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
+<url>
+<loc>https://tiranrothman.com/expert-opinions/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
+<url>
+<loc>https://tiranrothman.com/speaking/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
+<url>
+<loc>https://tiranrothman.com/book/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
+<url>
+<loc>https://tiranrothman.com/insights/</loc>
+<lastmod>2026-10-04</lastmod>
+</url>
 </urlset>
